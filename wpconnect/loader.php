@@ -15,7 +15,8 @@ License:     GPLv2 or later (license.txt)
 // Exit if accessed directly
 if ( !defined( 'ABSPATH' ) )
     exit;
-
+    
+	session_start();
 
 if ( !class_exists( 'WPConnect' ) ) {
 
