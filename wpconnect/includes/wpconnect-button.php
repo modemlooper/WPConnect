@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 function buddyconnect_login_form_button() {
 
 	if ( !is_user_logged_in() ) {
