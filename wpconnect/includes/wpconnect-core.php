@@ -28,6 +28,8 @@ if ( isset( $_GET[ 'code' ] ) && !is_user_logged_in() ) {
 	curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1);
 	$me = json_decode( curl_exec( $curl ) );
 	
+	if ( $me->verified != true )
+	die( 'You have not verified your WordPress.com account.' );
 	
 	$user_data = get_user_by( 'login', $me->username );
 	
