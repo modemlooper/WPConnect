@@ -3,7 +3,7 @@ if ( isset( $_GET[ 'code' ] ) && !is_user_logged_in() ) {
 
 	if ( false == isset( $_GET[ 'state' ] ) )
 		die( 'Warning! State variable missing after authentication' );
-	session_start();
+
 	if ( $_GET[ 'state' ] != $_SESSION[ 'wpcc_state' ] )
 		die( 'Warning! State mismatch. Authentication attempt may have been compromised.' );
 	
