@@ -52,7 +52,7 @@ function wpconnect_section_general() {
 function wpconnect_setting_client_id() {
 	global $wpconnect_options;
 
-	$key = !empty( $wpconnect_options['wpconnect_client_id'] ) ? $wpconnect_options['wpconnect_client_id'] : '' ;
+	$key = esc_attr( !empty( $wpconnect_options['wpconnect_client_id'] ) ) ? $wpconnect_options['wpconnect_client_id'] : '' ;
 	
 	echo "<input id='wpconnect_client_id' name='wpconnect_plugin_options[wpconnect_client_id]' size='40' type='text' value='$key' />  ";
 
@@ -61,7 +61,7 @@ function wpconnect_setting_client_id() {
 function wpconnect_setting_client_secret() {
 	global $wpconnect_options;
 
-	$key = !empty( $wpconnect_options['wpconnect_client_secret'] ) ? $wpconnect_options['wpconnect_client_secret'] : '' ;
+	$key = esc_attr( !empty( $wpconnect_options['wpconnect_client_secret'] ) ) ? $wpconnect_options['wpconnect_client_secret'] : '' ;
 
 	echo "<input id='wpconnect_client_secret' name='wpconnect_plugin_options[wpconnect_client_secret]' size='40' type='text' value='$key' />  ";
 
@@ -70,7 +70,7 @@ function wpconnect_setting_client_secret() {
 function wpconnect_setting_redirect_url() {
 	global $wpconnect_options;
 
-	$key = !empty( $wpconnect_options['wpconnect_redirect_url'] ) ? $wpconnect_options['wpconnect_redirect_url'] : '' ;
+	$key = esc_attr( !empty( $wpconnect_options['wpconnect_redirect_url'] ) ) ? $wpconnect_options['wpconnect_redirect_url'] : '' ;
 
 	echo "<input id='wpconnect_redirect_url' name='wpconnect_plugin_options[wpconnect_redirect_url]' size='40' type='text' value='$key' />  ";
 
